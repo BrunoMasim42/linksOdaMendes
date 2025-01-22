@@ -1,7 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    font-size: 14px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px auto;
+    padding: 0;
+    background-color: #035185;
+    width: 1200px;
+    height: 100%;
   }
   
   .gallery-container {
@@ -12,22 +28,38 @@ body {
   
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
   }
   
   .gallery-item {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     transition: transform 0.3s;
   }
   
   .gallery-item:hover {
     transform: scale(1.05);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .description {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    background-color: #f9f9f9;
   }
   
   .modal {
@@ -38,22 +70,21 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
   }
   
   .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
+    max-width: 80%;
     max-height: 80%;
-    border-radius: 8px;
   }
   
-  #caption {
-    margin: 15px auto;
-    text-align: center;
+  #modal-desc {
     color: white;
+    text-align: center;
+    margin: 15px auto;
     font-size: 18px;
   }
   
@@ -67,9 +98,47 @@ body {
     cursor: pointer;
   }
   
-  .close:hover,
-  .close:focus {
+  .close:hover {
     color: #f1c40f;
-    text-decoration: none;
-    cursor: pointer;
   }
+
+  .degrade{
+    background: linear-gradient(to right, #edd145, #75aaf4);
+}
+
+  footer{
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+footer a.btn-footer{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    font-size: 2em;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+footer a.btn-footer:hover{
+    transform: scale(1.05);
+}
+
+p{
+    font-size: 18px;
+    color: #fff;
+}
+
+.retorn{
+    margin: auto 20px auto;
+    margin-bottom: 30px;
+}
+.retorn a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
